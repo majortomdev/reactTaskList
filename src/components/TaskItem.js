@@ -3,14 +3,8 @@ import PropTypes from 'prop-types';
 
 export class TaskItem extends Component {
     getStyle = () => {
-        if(this.props.task.done){
-            return {
-                textDecoration: 'line-through'
-            }
-        } else {
-            return {
-                textDecoration: 'none'
-            }
+        return {
+            textDecoration: this.props.task.done? 'line-through': 'none'
         }
     }
 
